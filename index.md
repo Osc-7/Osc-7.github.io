@@ -6,12 +6,14 @@ author_profile: true
  Hi, I'm Yuxuan Liu. I'm an undergraduate at SJTU. Welcome to my personal page!
 
 ---
-
+---
 ## Projects
 
 {% for post in site.portfolio %}
-  {% include archive-single.html %}
+  {% include archive-single.html type="grid" %}
 {% endfor %}
+
+---
 
 ---
 
