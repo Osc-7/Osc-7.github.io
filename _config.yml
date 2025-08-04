@@ -35,7 +35,7 @@ github_username: "osc-7"
 # 个人信息 (会显示在主页左侧)
 author:
   name: "刘宇轩 (Yuxuan Liu)"
-  avatar: "/images/IMG_7125.jpeg"
+  avatar: "https://osc-7.github.io/images/IMG_7125.jpeg"
   bio: "Hi! I'm Yuxuan Liu, undergraduate of John Hopcroft Class 2024, SJTU. I'm currently exploring my research interest, and I'm looking forward to start a research internship!"
   location: "Shanghai, China"
   employer: "Shanghai Jiao Tong University"
