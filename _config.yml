@@ -59,6 +59,11 @@ minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "n
 #   - vendor/gems/
 #   - vendor/ruby/
 
+collections:
+  portfolio:
+    output: true
+    permalink: /portfolio/:path/
+
 plugins:
   - jekyll-include-cache
   - jekyll-feed
