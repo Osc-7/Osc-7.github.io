@@ -36,7 +36,7 @@ github_username: "osc-7"
 author:
   # 错误修正 2: 下面所有缩进都已换成正确的半角空格，这是最关键的修改！
   name: "刘宇轩 (Yuxuan Liu)"
-  avatar: "/images/avatar.jpeg" # 你的头像路径，请先上传一张照片到 /images/ 目录下，并修改文件名
+  avatar: "/images/IMG_7125.jpeg" # 你的头像路径，请先上传一张照片到 /images/ 目录下，并修改文件名
   bio: "Hi! I'm Yuxuan Liu, undergraduate of John Hopcroft Class 2024, SJTU. I'm currently exploring my research interest, and I'm looking forward to start a research internship!"
   location: "Shanghai, China"
   employer: "Shanghai Jiao Tong University"
