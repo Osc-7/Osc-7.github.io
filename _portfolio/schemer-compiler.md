@@ -3,6 +3,7 @@ title: "Schemer"
 excerpt: "A compiler for the Scheme language, written entirely in Scheme itself. This project explores the core concepts of compilation, including parsing, semantic analysis, and code generation."
 collection: portfolio
 github_url: "https://github.com/Osc-7/Schemer"
+url: https://github.com/Osc-7/Schemer
 ---
 
 ## Project Overview
