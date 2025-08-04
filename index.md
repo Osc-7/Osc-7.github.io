@@ -14,5 +14,4 @@ I also make music:)
 {% endfor %}
 
 ## Experience
-
 **2024 - Present** | Undergraduate, John Hopcroft Class, Zhiyuan College, Shanghai Jiao Tong University
