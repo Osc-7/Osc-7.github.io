@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: home
 author_profile: true
 ---
 
@@ -8,9 +8,11 @@ I also make music:)
 
 ---
 ## Projects
+
 {% for post in site.portfolio limit:3 %}
   {% include archive-single.html %}
 {% endfor %}
 
 ## Experience
+
 **2024 - Present** | Undergraduate, John Hopcroft Class, Zhiyuan College, Shanghai Jiao Tong University
