@@ -1,13 +1,14 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
+# Specify Jekyll version
+gem "jekyll", "~> 4.3.1"
+
+# Specify the theme
+gem "minimal-mistakes-jekyll", "~> 4.24.0"
+
+# Other plugins from your template
 group :jekyll_plugins do
-  gem 'jekyll'
-  gem 'jekyll-feed'
-  gem 'jekyll-sitemap'
-  gem 'jekyll-redirect-from'
-  gem 'jemoji'
-  gem 'webrick', '~> 1.8'
+  gem "jekyll-feed"
+  gem "jekyll-include-cache"
+  gem "jekyll-sitemap"
 end
-
-gem 'github-pages'
-gem 'connection_pool', '2.5.0'
