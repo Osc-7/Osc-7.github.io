@@ -10,35 +10,36 @@
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
 # 网站标题，会显示在浏览器标签页上
-title: Home Page for Yuxuan Liu # <-- 修改成你的名字或网站名
+title: Home Page for Yuxuan Liu
 # 你的联系邮箱
-email: "liuyx2005@sjtu.edu.com" # <-- 修改成你的邮箱
+email: "liuyx2005@sjtu.edu.com"
 # 网站的一句话描述，会用于搜索引擎优化
-description: Undergraduate of John Hopcroft Class 2024, Shanghai Jiao Tong University # any text can be put here
-  这里是关于你的一句话简介，比如你的研究方向或身份。
+description: Undergraduate of John Hopcroft Class 2024, Shanghai Jiao Tong University
+# 错误修正 1: 下面这行多余的模板注释已被删除。
 
 # 网站域名设置 (非常重要!)
-baseurl: "" # 如果你的仓库名叫 "osc-7.github.io"，就保持这样
-url: "https://osc-7.github.io" # 这是你的网站根域名，请保持
+baseurl: ""
+url: "https://osc-7.github.io"
 
 # 社交媒体和学术档案链接
 # 在下面填入你的用户名或ID即可自动生成链接，不需要的可以留空或在行首加 # 注释掉
-# twitter_username:    # 你的Twitter用户名
-github_username: "osc-7"  # 你的GitHub用户名 (已填好)
-# linkedin_username:   # 你的LinkedIn用户名
+# twitter_username:
+github_username: "osc-7"
+# linkedin_username:
 # scholar:
-  # id:              # 你的Google Scholar (谷歌学术) ID
-  # last_name: Liu   # 你的姓氏拼音，用于生成引用链接
-# orcid:             # 你的ORCID iD
-# research_gate_profile: # 你的ResearchGate Profile
+#   id:
+#   last_name: Liu
+# orcid:
+# research_gate_profile:
 
 # 个人信息 (会显示在主页左侧)
 author:
-  name: "刘宇轩 (Yuxuan Liu)"  
+  # 错误修正 2: 下面所有缩进都已换成正确的半角空格，这是最关键的修改！
+  name: "刘宇轩 (Yuxuan Liu)"
   avatar: "/images/avatar.jpg" # 你的头像路径，请先上传一张照片到 /images/ 目录下，并修改文件名
-  bio: "Hi! I'm Yuxuan Liu, undergraduate of John Hopcroft Class 2024, SJTU. I'm currently exploring my research interest, and I'm looking forward to start a research internship!" # <-- 修改成你的简介
-  location: "Shanghai, China" # <-- 修改成你所在的地点
-  employer: "Shanghai Jiao Tong University" # <-- 修改成你的单位
+  bio: "Hi! I'm Yuxuan Liu, undergraduate of John Hopcroft Class 2024, SJTU. I'm currently exploring my research interest, and I'm looking forward to start a research internship!"
+  location: "Shanghai, China"
+  employer: "Shanghai Jiao Tong University"
 
 # 其他设置 (一般无需修改)
 # Build settings
@@ -68,5 +69,5 @@ plugins:
 analytics:
   provider: "google-gtag"
   google:
-    tracking_id: "G-xxxxxxxxxx" # 如果你想用Google Analytics分析网站流量，在这里填入你的Tracking ID
+    tracking_id: "G-xxxxxxxxxx"
     anonymize_ip: false
