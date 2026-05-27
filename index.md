@@ -18,7 +18,8 @@ I also make music:)
 ## Projects
 
 <div class="site-card-list">
-{% for post in site.portfolio limit:3 %}
+{% assign sorted_portfolio = site.portfolio | sort: "date" | reverse %}
+{% for post in sorted_portfolio limit:3 %}
   {% include archive-single.html %}
 {% endfor %}
 </div>
