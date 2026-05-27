@@ -20,7 +20,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1' # Version of Ruby to use
+          ruby-version: '3.2' # Match project Dockerfile and avoid runner incompatibilities
           bundler-cache: true # Automatically runs bundle install
 
       - name: Build the site
