@@ -10,11 +10,14 @@
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
 # 网站标题，会显示在浏览器标签页上
-title: Home Page for Yuxuan Liu
+title: Yuxuan Liu
+name: Yuxuan Liu
+locale: en-US
+title_separator: " | "
 # 你的联系邮箱
 email: "liuyx2005@sjtu.edu.com"
 # 网站的一句话描述，会用于搜索引擎优化
-description: Undergraduate of John Hopcroft Class 2024, Shanghai Jiao Tong University
+description: Personal website of Yuxuan Liu, undergraduate student at Shanghai Jiao Tong University.
 # 错误修正 1: 下面这行多余的模板注释已被删除。
 
 # 网站域名设置 (非常重要!)
@@ -34,11 +37,18 @@ github_username: "osc-7"
 
 # 个人信息 (会显示在主页左侧)
 author:
-  name: "刘宇轩 (Yuxuan Liu)"
-  avatar: "https://osc-7.github.io/images/avatar.png"
-  bio: "Hi! I'm Yuxuan Liu, undergraduate of John Hopcroft Class 2024, SJTU. I'm currently exploring my research interest, and I'm looking forward to start a research internship!"
+  name: "Yuxuan Liu (刘宇轩)"
+  avatar: "/images/avatar.png"
+  bio: "Undergraduate in the John Hopcroft Class at SJTU, interested in machine learning and systems."
   location: "Shanghai, China"
   employer: "Shanghai Jiao Tong University"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:liuyx2005@sjtu.edu.com"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/osc-7"
 
 # 其他设置 (一般无需修改)
 # Build settings
@@ -46,6 +56,8 @@ markdown: kramdown
 permalink: /:categories/:title/
 theme: minimal-mistakes-jekyll
 minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+breadcrumbs: true
+search: true
 
 # Exclude from processing
 # The following items will not be processed, by default. Create a custom list
@@ -63,6 +75,14 @@ collections:
   portfolio:
     output: true
     permalink: /portfolio/:path/
+
+publication_category:
+  manuscripts:
+    title: "Manuscripts"
+  conferences:
+    title: "Conference Papers"
+  journals:
+    title: "Journal Papers"
 
 plugins:
   - jekyll-include-cache

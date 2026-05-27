@@ -1,5 +1,5 @@
 ---
-permalink: /
+permalink: /about/
 title: "About me"
 excerpt: "About me"
 author_profile: true
@@ -8,24 +8,21 @@ redirect_from:
   - /about.html
 ---
 
-👋 Hi, I'm Yuxuan Liu. I'm an undergraduate at SJTU. Welcome to my personal page!
+I am **Yuxuan Liu (刘宇轩)**, an undergraduate student in the John Hopcroft Class at Shanghai Jiao Tong University.
 
----
+I am currently interested in machine learning and systems, and I enjoy turning ideas into practical projects.
 
-## Projects
+## Education
 
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
-{% endfor %}
+- **2024 - Present**: Undergraduate, John Hopcroft Class, Zhiyuan College, Shanghai Jiao Tong University
 
----
+## Interests
 
-## Publications
+- Machine learning systems
+- Efficient model training and inference
+- Creative coding and computer music
 
-{% for post in site.publications limit:5 %}
-  {% include archive-single.html %}
-{% endfor %}
+## Contact
 
----
-
-## Experience
+- Email: `liuyx2005@sjtu.edu.com`
+- GitHub: [osc-7](https://github.com/osc-7)
