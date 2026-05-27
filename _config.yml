@@ -86,6 +86,20 @@ publication_category:
   journals:
     title: "Journal Papers"
 
+defaults:
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: single
+      author_profile: true
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: true
+
 plugins:
   - jekyll-include-cache
   - jekyll-feed

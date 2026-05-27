@@ -7,3 +7,5 @@ authors: "Yijie Jin, Jiajun Xu, **Yuxuan Liu**, Chenkai Xu, Jiajun Li, Kai Yu, P
 status: "Submitted to EMNLP 2026 (ACL Rolling Review). Under review."
 date: 2026-05-27
 ---
+
+This manuscript is currently under review.
