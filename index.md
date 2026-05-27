@@ -7,6 +7,12 @@ Hi, I'm Yuxuan Liu. I'm an undergraduate at SJTU. Welcome to my personal page!
 I also make music:)
 
 ---
+## Publications
+
+{% for post in site.publications reversed %}
+  {% include archive-single.html %}
+{% endfor %}
+
 ## Projects
 
 {% for post in site.portfolio limit:3 %}
