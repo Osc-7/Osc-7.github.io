@@ -3,8 +3,8 @@ layout: home
 author_profile: true
 ---
 
-Hi, I'm Yuxuan Liu. I'm an undergraduate at SJTU. Welcome to my personal page!  
-I also make music:) Checkout: [music](https://music.163.com/#/artist?id=36129592)
+Hi, I'm Yuxuan Liu, an undergraduate in the John Hopcroft Class at SJTU. I work on efficient generative AI and ML systems.  
+I also make music — check out [Osc7's music](https://music.163.com/#/artist?id=36129592).
 
 ---
 

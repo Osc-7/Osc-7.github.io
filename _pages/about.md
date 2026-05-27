@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 <div class="page-intro">
-  <p>Hi, I'm <strong>Yuxuan Liu</strong>. I'm an undergraduate in the John Hopcroft Class at SJTU. I enjoy building things in code and making music.</p>
+  <p>Hi, I'm <strong>Yuxuan Liu</strong>, an undergraduate in the John Hopcroft Class at SJTU. I work on efficient generative AI and ML systems, and I also make music.</p>
 </div>
 
 <div class="about-grid">
