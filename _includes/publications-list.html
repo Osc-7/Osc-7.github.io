@@ -1,0 +1,23 @@
+{% include base_path %}
+
+{% if site.publication_category %}
+  {% for category in site.publication_category %}
+    {% assign category_posts = site.publications | where: "category", category[0] | sort: "date" | reverse %}
+    {% if category_posts.size > 0 %}
+      <section class="content-section">
+        <h2 class="content-section__title">{{ category[1].title }}</h2>
+        <div class="site-card-list">
+          {% for post in category_posts %}
+            {% include archive-single.html %}
+          {% endfor %}
+        </div>
+      </section>
+    {% endif %}
+  {% endfor %}
+{% else %}
+  <div class="site-card-list">
+    {% for post in site.publications reversed %}
+      {% include archive-single.html %}
+    {% endfor %}
+  </div>
+{% endif %}

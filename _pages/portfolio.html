@@ -1,14 +1,13 @@
 ---
 layout: archive
 title: "Portfolio"
+subtitle: "Selected projects"
 permalink: /portfolio/
 author_profile: true
 ---
 
-{% include base_path %}
+<div class="page-intro">
+  <p>Projects I have built, mostly around compilers, systems, and programming languages.</p>
+</div>
 
-
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
-{% endfor %}
-
+{% include portfolio-list.html %}

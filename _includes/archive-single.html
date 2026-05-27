@@ -13,7 +13,7 @@
 {% endif %}
 
 <div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+  <article class="archive__item{% if post.collection == 'publications' or post.collection == 'portfolio' %} site-card site-card--{{ post.collection }}{% endif %}" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
         <img src=
@@ -42,10 +42,14 @@
           <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif post.collection == 'publications' %}
           {% if post.authors %}
-            <p>{{ post.authors | markdownify }}</p>
+            <p class="site-card__authors">{{ post.authors | markdownify }}</p>
           {% endif %}
           {% if post.status %}
-            <p><em>{{ post.status }}</em></p>
+            <p class="site-card__status"><em>{{ post.status }}</em></p>
+          {% endif %}
+        {% elsif post.collection == 'portfolio' %}
+          {% if post.date %}
+            <p class="site-card__meta">{{ post.date | date: "%Y" }}</p>
           {% endif %}
         {% elsif post.date %}
          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
@@ -55,6 +59,10 @@
     <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
     {% elsif post.excerpt and site.read_more == 'enabled' %}
     <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
+    {% endif %}
+
+    {% if post.collection == 'portfolio' and post.link %}
+      <p class="site-card__actions"><a href="{{ post.link }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> View on GitHub</a></p>
     {% endif %}
     
     {% if post.collection != 'publications' and post.citation and post.paperurl and post.slidesurl and post.bibtexurl %}
