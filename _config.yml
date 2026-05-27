@@ -37,18 +37,13 @@ github_username: "osc-7"
 
 # 个人信息 (会显示在主页左侧)
 author:
-  name: "Yuxuan Liu (刘宇轩)"
-  avatar: "/images/avatar.png"
-  bio: "Undergraduate in the John Hopcroft Class at SJTU, interested in machine learning and systems."
+  name: "刘宇轩 (Yuxuan Liu)"
+  avatar: "https://osc-7.github.io/images/avatar.png"
+  bio: "Hi! I'm Yuxuan Liu, undergraduate of John Hopcroft Class 2024, SJTU. I'm currently exploring my research interest, and I'm looking forward to start a research internship!"
   location: "Shanghai, China"
   employer: "Shanghai Jiao Tong University"
-  links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:liuyx2005@sjtu.edu.com"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/osc-7"
+  email: "liuyx2005@sjtu.edu.com"
+  github: "osc-7"
 
 # 其他设置 (一般无需修改)
 # Build settings
@@ -71,10 +66,17 @@ search: true
 #   - vendor/gems/
 #   - vendor/ruby/
 
+include:
+  - _pages
+  - files
+
 collections:
+  publications:
+    output: true
+    permalink: /:collection/:path/
   portfolio:
     output: true
-    permalink: /portfolio/:path/
+    permalink: /:collection/:path/
 
 publication_category:
   manuscripts:

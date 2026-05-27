@@ -17,12 +17,6 @@ You can download my latest CV here:
 
 - **Shanghai Jiao Tong University**, John Hopcroft Class, Zhiyuan College, B.Eng. (Expected), 2024 - Present
 
-## Research Interests
-
-- Machine learning systems
-- Efficient model training and inference
-- AI for creative applications
-
 ## Selected Publications
 
 <ul>{% for post in site.publications reversed %}

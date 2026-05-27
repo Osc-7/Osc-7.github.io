@@ -1,33 +1,17 @@
 ---
 layout: home
 author_profile: true
-title: "Home"
-excerpt: "Yuxuan Liu | Undergraduate at Shanghai Jiao Tong University"
 ---
 
-Hi, I am Yuxuan Liu, an undergraduate in the John Hopcroft Class at Shanghai Jiao Tong University.
-This site collects my projects, notes, and updates on what I am building and learning.
+Hi, I'm Yuxuan Liu. I'm an undergraduate at SJTU. Welcome to my personal page!
+I also make music:)
 
-## Research Interests
+---
+## Projects
 
-- Machine learning systems
-- Efficient inference and training
-- AI for creative applications (including music)
-
-## Featured Project
-
-{% for post in site.portfolio limit:1 %}
-  {% include archive-single.html type="list" %}
+{% for post in site.portfolio limit:3 %}
+  {% include archive-single.html %}
 {% endfor %}
 
-## Current Focus
-
-- Building solid foundations in mathematics, algorithms, and systems
-- Exploring research directions through open-source projects
-- Preparing for research internships
-
-## Quick Links
-
-- [Portfolio](/portfolio/)
-- [Blog](/year-archive/)
-- [CV](/cv/)
+## Experience
+**2024 - Present** | Undergraduate, John Hopcroft Class, Zhiyuan College, Shanghai Jiao Tong University
