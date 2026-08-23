@@ -39,11 +39,12 @@ github_username: "osc-7"
 author:
   name: "刘宇轩 (Yuxuan Liu)"
   avatar: "https://osc-7.github.io/images/avatar.png"
-  bio: "Undergraduate in the John Hopcroft Class at SJTU. I work on efficient generative AI and ML systems."
+  bio: "Undergraduate researcher at DENG Lab, SJTU. Working on efficient generative AI and ML systems."
   location: "Shanghai, China"
   employer: "Shanghai Jiao Tong University"
   email: "liuyx2005@sjtu.edu.com"
   github: "osc-7"
+  googlescholar: "https://scholar.google.com/citations?user=jb3aUrMAAAAJ"
 
 # 其他设置 (一般无需修改)
 # Build settings

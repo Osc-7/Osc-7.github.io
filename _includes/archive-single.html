@@ -2,6 +2,8 @@
 
 {% if post.header.teaser %}
   {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% elsif post.teaser %}
+  {% capture teaser %}{{ post.teaser }}{% endcapture %}
 {% else %}
   {% assign teaser = site.teaser %}
 {% endif %}
@@ -12,9 +14,20 @@
   {% assign title = post.title %}
 {% endif %}
 
+{% assign show_teaser = false %}
+{% if post.collection == 'publications' %}
+  {% assign show_teaser = true %}
+{% endif %}
+
 <div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item{% if post.collection == 'publications' or post.collection == 'portfolio' %} site-card site-card--{{ post.collection }}{% endif %}" itemscope itemtype="http://schema.org/CreativeWork">
-    {% if include.type == "grid" and teaser %}
+  <article class="archive__item{% if post.collection == 'publications' or post.collection == 'portfolio' %} site-card site-card--{{ post.collection }}{% endif %}{% if show_teaser %} site-card--with-teaser{% endif %}" itemscope itemtype="http://schema.org/CreativeWork">
+    {% if show_teaser %}
+      <div class="site-card__teaser"{% unless teaser %} aria-hidden="true"{% endunless %}>
+        {% if teaser %}
+          <img src="{% if teaser contains '://' %}{{ teaser }}{% else %}{{ teaser | prepend: '/images/' | relative_url }}{% endif %}" alt="" loading="lazy" />
+        {% endif %}
+      </div>
+    {% elsif include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
         <img src=
           {% if teaser contains "://" %}
@@ -26,9 +39,12 @@
       </div>
     {% endif %}
 
+    <div class="{% if show_teaser %}site-card__body{% endif %}">
     <h2 class="archive__item-title" itemprop="headline">
-      {% if post.link %}
-        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+      {% if post.collection == 'publications' %}
+        <a href="{% if post.link %}{{ post.link }}{% else %}{{ base_path }}{{ post.url }}{% endif %}">{{ title }}</a>
+      {% elsif post.link %}
+        <a href="{{ post.link }}">{{ title }}</a>
       {% else %}
         <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
       {% endif %}
@@ -41,11 +57,11 @@
         {% if post.collection == 'teaching' %}
           <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif post.collection == 'publications' %}
-          {% if post.authors %}
-            <p class="site-card__authors">{{ post.authors | markdownify }}</p>
-          {% endif %}
           {% if post.status %}
-            <p class="site-card__status"><em>{{ post.status }}</em></p>
+            <p class="site-card__status">{{ post.status }}</p>
+          {% endif %}
+          {% if post.authors %}
+            <p class="site-card__authors">{{ post.authors | markdownify | remove: '<p>' | remove: '</p>' }}</p>
           {% endif %}
         {% elsif post.collection == 'portfolio' %}
           {% if post.date %}
@@ -55,15 +71,26 @@
          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
         {% endif %}
 
-    {% if post.excerpt and site.read_more != 'enabled' %}
+    {% if post.collection != 'publications' and post.excerpt and site.read_more != 'enabled' %}
     <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
-    {% elsif post.excerpt and site.read_more == 'enabled' %}
+    {% elsif post.collection != 'publications' and post.excerpt and site.read_more == 'enabled' %}
     <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
+    {% endif %}
+
+    {% if post.collection == 'publications' %}
+      {% if post.link or post.arxiv %}
+      <p class="site-card__actions">
+        {% if post.link %}<a href="{{ post.link }}" target="_blank" rel="noopener noreferrer">Project</a>{% endif %}
+        {% if post.link and post.arxiv %}<span class="site-card__sep" aria-hidden="true">·</span>{% endif %}
+        {% if post.arxiv %}<a href="{{ post.arxiv }}" target="_blank" rel="noopener noreferrer">arXiv</a>{% endif %}
+      </p>
+      {% endif %}
     {% endif %}
 
     {% if post.collection == 'portfolio' and post.link %}
       <p class="site-card__actions"><a href="{{ post.link }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> View on GitHub</a></p>
     {% endif %}
+    </div>
     
     {% if post.collection != 'publications' and post.citation and post.paperurl and post.slidesurl and post.bibtexurl %}
       <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.slidesurl }}">Download Slides</a> | <a href="{{ post.bibtexurl }}">Download Bibtex</a></p>

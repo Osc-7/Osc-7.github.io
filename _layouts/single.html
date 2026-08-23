@@ -38,11 +38,18 @@ layout: default
         {% if page.collection == 'teaching' %}
           <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.collection == 'publications' %}
+          {% if page.status %}
+            <p class="site-card__status">{{ page.status }}</p>
+          {% endif %}
           {% if page.authors %}
             <p>{{ page.authors | markdownify }}</p>
           {% endif %}
-          {% if page.status %}
-            <p><em>{{ page.status }}</em></p>
+          {% if page.link or page.arxiv %}
+            <p class="site-card__actions">
+              {% if page.link %}<a href="{{ page.link }}" target="_blank" rel="noopener noreferrer">Project</a>{% endif %}
+              {% if page.link and page.arxiv %}<span class="site-card__sep" aria-hidden="true">·</span>{% endif %}
+              {% if page.arxiv %}<a href="{{ page.arxiv }}" target="_blank" rel="noopener noreferrer">arXiv</a>{% endif %}
+            </p>
           {% endif %}
         {% elsif page.venue and page.date %}
           <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
