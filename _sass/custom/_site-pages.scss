@@ -317,6 +317,13 @@
   color: var(--global-link-color);
 }
 
+.site-card__badge {
+  color: var(--global-text-color);
+  font-family: "Source Serif 4", Georgia, Times, serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
 .site-card__meta {
   font-size: 0.9rem;
   color: var(--global-text-color-light);

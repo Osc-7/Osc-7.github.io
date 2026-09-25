@@ -38,8 +38,10 @@ layout: default
         {% if page.collection == 'teaching' %}
           <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.collection == 'publications' %}
-          {% if page.status %}
-            <p class="site-card__status">{{ page.status }}</p>
+          {% if page.status or page.badge %}
+            <p class="site-card__status">
+              {% if page.status %}{{ page.status }}{% endif %}{% if page.badge %} <span class="site-card__badge">({{ page.badge }})</span>{% endif %}
+            </p>
           {% endif %}
           {% if page.authors %}
             <p>{{ page.authors | markdownify }}</p>
