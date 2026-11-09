@@ -65,6 +65,9 @@
           {% if post.authors %}
             <p class="site-card__authors">{{ post.authors | markdownify | remove: '<p>' | remove: '</p>' }}</p>
           {% endif %}
+          {% if post.equal_contribution %}
+            <p class="site-card__author-note"><sup>*</sup> Equal contribution</p>
+          {% endif %}
         {% elsif post.collection == 'portfolio' %}
           {% if post.date %}
             <p class="site-card__meta">{{ post.date | date: "%Y" }}</p>
@@ -80,17 +83,15 @@
     {% endif %}
 
     {% if post.collection == 'publications' %}
-      {% if post.link or post.arxiv %}
-      <p class="site-card__actions">
-        {% if post.link %}<a href="{{ post.link }}" target="_blank" rel="noopener noreferrer">Project</a>{% endif %}
-        {% if post.link and post.arxiv %}<span class="site-card__sep" aria-hidden="true">·</span>{% endif %}
-        {% if post.arxiv %}<a href="{{ post.arxiv }}" target="_blank" rel="noopener noreferrer">arXiv</a>{% endif %}
-      </p>
-      {% endif %}
+      {% include publication-actions.html item=post %}
     {% endif %}
 
-    {% if post.collection == 'portfolio' and post.link %}
-      <p class="site-card__actions"><a href="{{ post.link }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> View on GitHub</a></p>
+    {% if post.collection == 'portfolio' %}
+      {% if post.github or post.huggingface or post.arxiv %}
+        {% include publication-actions.html item=post %}
+      {% elsif post.link %}
+        <p class="site-card__actions"><a href="{{ post.link }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> View on GitHub</a></p>
+      {% endif %}
     {% endif %}
     </div>
     

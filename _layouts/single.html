@@ -46,13 +46,10 @@ layout: default
           {% if page.authors %}
             <p>{{ page.authors | markdownify }}</p>
           {% endif %}
-          {% if page.link or page.arxiv %}
-            <p class="site-card__actions">
-              {% if page.link %}<a href="{{ page.link }}" target="_blank" rel="noopener noreferrer">Project</a>{% endif %}
-              {% if page.link and page.arxiv %}<span class="site-card__sep" aria-hidden="true">·</span>{% endif %}
-              {% if page.arxiv %}<a href="{{ page.arxiv }}" target="_blank" rel="noopener noreferrer">arXiv</a>{% endif %}
-            </p>
+          {% if page.equal_contribution %}
+            <p class="site-card__author-note"><sup>*</sup> Equal contribution</p>
           {% endif %}
+          {% include publication-actions.html item=page %}
         {% elsif page.venue and page.date %}
           <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.date %}

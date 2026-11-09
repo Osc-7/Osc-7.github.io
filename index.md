@@ -30,7 +30,7 @@ author_profile: false
 <section class="content-section" id="projects">
   <h2 class="content-section__title">Projects</h2>
   <div class="site-card-list">
-    {% assign sorted_portfolio = site.portfolio | sort: "date" | reverse %} {% for post in sorted_portfolio limit:3 %} {% include archive-single.html %} {% endfor %}
+    {% assign sorted_portfolio = site.portfolio | sort: "date" | reverse %} {% for post in sorted_portfolio %} {% include archive-single.html %} {% endfor %}
   </div>
 </section>
 
