@@ -1,0 +1,87 @@
+/* ==========================================================================
+   TIDE: site-wide palette and type
+   ========================================================================== */
+
+:root {
+  --tide-paper: #eef2f3;
+  --tide-paper-deep: #e3e9eb;
+  --tide-ink: #1c2b3a;
+  --tide-ink-soft: #5a6b7b;
+  --tide-blue: #2f5fa8;
+  --tide-rule: #d3dbdf;
+
+  --global-base-color: var(--tide-ink-soft);
+  --global-bg-color: var(--tide-paper);
+  --global-footer-bg-color: var(--tide-paper-deep);
+  --global-border-color: var(--tide-rule);
+  --global-dark-border-color: #bcc8ce;
+  --global-text-color: var(--tide-ink);
+  --global-text-color-light: var(--tide-ink-soft);
+  --global-link-color: var(--tide-blue);
+  --global-link-color-hover: #234a86;
+  --global-link-color-visited: var(--tide-blue);
+  --global-masthead-link-color: var(--tide-ink);
+  --global-masthead-link-color-hover: var(--tide-blue);
+  --global-thead-color: var(--tide-paper-deep);
+  --global-fig-caption-color: var(--tide-ink-soft);
+}
+
+html[data-theme="dark"] {
+  --tide-paper: #101c2b;
+  --tide-paper-deep: #0c1622;
+  --tide-ink: #e2e8ee;
+  --tide-ink-soft: #8fa1b3;
+  --tide-blue: #8db2f0;
+  --tide-rule: #24344a;
+
+  --global-base-color: var(--tide-ink-soft);
+  --global-bg-color: var(--tide-paper);
+  --global-footer-bg-color: var(--tide-paper-deep);
+  --global-border-color: var(--tide-rule);
+  --global-dark-border-color: #1a2839;
+  --global-text-color: var(--tide-ink);
+  --global-text-color-light: var(--tide-ink-soft);
+  --global-link-color: var(--tide-blue);
+  --global-link-color-hover: #b3cbf5;
+  --global-link-color-visited: var(--tide-blue);
+  --global-masthead-link-color: var(--tide-ink);
+  --global-masthead-link-color-hover: var(--tide-blue);
+  --global-thead-color: var(--tide-paper-deep);
+  --global-code-background-color: #17263a;
+  --global-code-text-color: var(--tide-ink);
+}
+
+body {
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+.greedy-nav {
+  background: transparent;
+
+  .visible-links a {
+    font-size: 1.05rem;
+    color: var(--global-masthead-link-color);
+  }
+
+  .site-title {
+    font-weight: 500;
+  }
+}
+
+.page__footer {
+  color: var(--global-text-color-light);
+}
+
+::selection {
+  background: color-mix(in srgb, var(--tide-blue) 22%, transparent);
+}

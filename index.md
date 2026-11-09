@@ -9,13 +9,13 @@ author_profile: false
     <h1 class="hero__name">Yuxuan Liu<span class="hero__name-cn">刘宇轩</span></h1>
     <p class="hero__tagline">Hi, I'm Yuxuan Liu, an undergraduate in the John Hopcroft Class at SJTU. I'm currently an undergraduate researcher at <a href="https://sjtu-deng-lab.github.io/">DENG Lab</a>, working with <a href="https://thudzj.github.io/">Prof. Zhijie Deng</a> on efficient generative AI and ML systems.</p>
     <p class="hero__focus">Currently focusing on autoregressive diffusion models and video world models.</p>
-    <p class="hero__bio">I also make music — check out <a href="https://music.163.com/#/artist?id=36129592">Osc7's music</a>.</p>
+    <p class="hero__bio">I also make music — check out <a href="{{ '/music/' | relative_url }}">Osc7's music</a>.</p>
     <nav class="hero__actions" aria-label="Quick links">
       <a href="{{ '/files/CV_Yuxuan_Liu.pdf' | relative_url }}">CV</a>
       <a href="https://github.com/osc-7">GitHub</a>
       <a href="mailto:liuyx2005@sjtu.edu.com">Email</a>
       <a href="https://scholar.google.com/citations?user=jb3aUrMAAAAJ">Scholar</a>
-      <a href="https://music.163.com/#/artist?id=36129592">Music</a>
+      <a href="{{ '/music/' | relative_url }}">Music</a>
     </nav>
   </div>
 </div>
@@ -36,5 +36,7 @@ author_profile: false
 
 <section class="content-section" id="experience">
   <h2 class="content-section__title">Experience</h2>
-  <p class="experience-line"><strong>2024 – Present</strong> · Undergraduate, John Hopcroft Class, Zhiyuan College, Shanghai Jiao Tong University</p>
+  <ul class="experience-list">
+    <li class="experience-line"><span class="experience-line__when">2024 – Present</span><span>Undergraduate, John Hopcroft Class, Zhiyuan College, Shanghai Jiao Tong University</span></li>
+  </ul>
 </section>

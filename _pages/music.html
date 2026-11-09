@@ -1,0 +1,84 @@
+---
+layout: default
+title: "Music"
+permalink: /music/
+excerpt: "Songs Yuxuan Liu has released as Osc7 since 2021."
+---
+
+{% assign music = site.data.music %}
+{% assign releases = music.releases | sort: "date" %}
+{% assign earliest = releases | first %}
+{% assign latest = releases | last %}
+{% assign releases = releases | reverse %}
+{% assign years = releases | group_by_exp: "release", "release.date | date: '%Y'" %}
+
+{% capture play_icon %}<svg class="play-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path class="play-icon__play" d="M4.5 2.8v10.4L13 8z"/><path class="play-icon__pause" d="M4 2.5h2.6v11H4zM9.4 2.5H12v11H9.4z"/></svg>{% endcapture %}
+
+<main id="main" class="music" role="main">
+  <header class="music-hero">
+    <h1 class="music-hero__name">Osc7</h1>
+    <p class="music-hero__lede">Welcome to my music world.</p>
+    <p class="music-hero__listen"><a href="{{ music.artist_url }}" target="_blank" rel="noopener noreferrer">Osc7 on NetEase Cloud Music</a></p>
+
+    <div class="music-wave" data-start="{{ earliest.date | date: '%Y' }}-01-01" data-end="{{ latest.date | date: '%Y' }}-12-31">
+      <div class="music-wave__plot" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <section class="music-releases" aria-labelledby="music-releases-title">
+    <h2 id="music-releases-title" class="music-section-title">Releases</h2>
+    <ol class="music-years">
+      {% for year in years %}
+      <li class="music-year">
+        <h3 class="music-year__label">{{ year.name }}</h3>
+        <ol class="music-year__list">
+          {% for release in year.items %}
+          {% capture album_url %}https://music.163.com/#/album?id={{ release.album_id }}{% endcapture %}
+          {% assign first_track = release.tracks | first %}
+          <li class="release{% if release.tracks.size == 1 %} release--single{% endif %}" id="{{ release.slug }}" data-date="{{ release.date | date: '%Y-%m-%d' }}" data-songs="{{ release.tracks.size }}" data-title="{{ release.title | escape }}">
+            <button class="release__cover" type="button" data-track="{{ first_track.id }}" aria-label="Play {{ release.title | escape }}">
+              <img src="{{ '/images/music/' | append: release.cover | relative_url }}" alt="" width="80" height="80" loading="lazy" />
+              <span class="release__cover-icon">{{ play_icon }}</span>
+            </button>
+            <div class="release__body">
+              <h4 class="release__title"><a href="{{ album_url }}" target="_blank" rel="noopener noreferrer">{{ release.title }}</a></h4>
+              <p class="release__meta"><time datetime="{{ release.date | date: '%Y-%m-%d' }}">{{ release.date | date: "%B %-d" }}</time>{% if release.compilation %}, on <span class="release__on">{{ release.compilation }}</span>{% endif %}</p>
+              <ol class="release__tracks">
+                {% for track in release.tracks %}
+                <li>
+                  <button class="track" type="button" data-track="{{ track.id }}" data-title="{{ track.title | escape }}" data-release="{{ release.title | escape }}" data-cover="{{ '/images/music/' | append: release.cover | relative_url }}"{% if release.tracks.size == 1 %} aria-label="Play {{ track.title | escape }}"{% endif %}>
+                    <span class="track__icon">{{ play_icon }}</span>
+                    {% if release.tracks.size > 1 %}<span class="track__no">{{ forloop.index }}</span><span class="track__title">{{ track.title }}</span>{% endif %}
+                    <span class="track__length">{{ track.length }}</span>
+                  </button>
+                </li>
+                {% endfor %}
+              </ol>
+            </div>
+          </li>
+          {% endfor %}
+        </ol>
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+</main>
+
+<div class="player" data-src-pattern="https://music.163.com/song/media/outer/url?id={id}.mp3" hidden>
+  <div class="player__inner">
+    <button class="player__toggle" type="button" aria-label="Play">{{ play_icon }}</button>
+    <img class="player__cover" src="data:," alt="" width="40" height="40" />
+    <div class="player__body">
+      <p class="player__title"><span class="player__track"></span><span class="player__release"></span></p>
+      <div class="player__progress">
+        <input class="player__seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Seek" />
+        <span class="player__time"><span class="player__elapsed">0:00</span> / <span class="player__duration">0:00</span></span>
+      </div>
+      <p class="player__error" hidden>This song won't play here. <a href="{{ music.artist_url }}" target="_blank" rel="noopener noreferrer">Listen on NetEase Cloud Music</a></p>
+    </div>
+  </div>
+  <audio class="player__audio" preload="none"></audio>
+</div>
+
+<script src="{{ '/assets/js/music-wave.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/music-player.js' | relative_url }}" defer></script>

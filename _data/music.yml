@@ -1,0 +1,121 @@
+artist_url: https://music.163.com/#/artist?id=36129592
+
+releases:
+  - title: "7 AM"
+    slug: 7-am
+    date: 2021-05-04
+    album_id: 126922652
+    cover: 7-am.jpg
+    tracks:
+      - { title: "7 AM", id: 1842435182, length: "4:30" }
+      - { title: "7 AM (Extended Mix)", id: 1842474017, length: "5:30" }
+
+  - title: "Summer Nights"
+    slug: summer-nights
+    date: 2021-08-27
+    album_id: 132361721
+    cover: summer-nights.jpg
+    tracks:
+      - { title: "Summer Nights", id: 1873107223, length: "3:37" }
+
+  - title: "Truth"
+    slug: truth
+    date: 2021-09-14
+    album_id: 133205901
+    cover: truth.jpg
+    tracks:
+      - { title: "Truth", id: 1878019421, length: "4:25" }
+
+  - title: "Breath"
+    slug: breath
+    date: 2021-11-20
+    album_id: 136381976
+    cover: breath.jpg
+    tracks:
+      - { title: "Breath", id: 1896514244, length: "3:42" }
+
+  - title: "Blue Type Feelingz"
+    slug: blue-type-feelingz
+    date: 2021-12-05
+    album_id: 137040121
+    cover: blue-type-feelingz.jpg
+    tracks:
+      - { title: "Blue Type Feelingz", id: 1900670344, length: "2:57" }
+
+  - title: "Matinal"
+    slug: matinal
+    date: 2022-07-10
+    album_id: 147781600
+    cover: matinal.jpg
+    tracks:
+      - { title: "Matinal", id: 1962175004, length: "3:02" }
+
+  - title: "Game!"
+    slug: game
+    date: 2023-01-05
+    album_id: 157719991
+    cover: game.jpg
+    tracks:
+      - { title: "Game!", id: 2012284857, length: "3:24" }
+
+  - title: "take you home"
+    slug: take-you-home
+    date: 2023-03-29
+    album_id: 162423059
+    cover: take-you-home.jpg
+    tracks:
+      - { title: "take you home", id: 2033097379, length: "2:52" }
+
+  - title: "Everything About Me"
+    slug: everything-about-me
+    date: 2024-07-16
+    album_id: 242156127
+    cover: hertz-vol5.jpg
+    compilation: "HertzRecords Vol.5 無声絆詩"
+    tracks:
+      - { title: "Everything About Me", id: 2608087698, length: "2:41" }
+
+  - title: "unwritten"
+    slug: unwritten
+    date: 2025-02-14
+    album_id: 261840969
+    cover: unwritten.jpg
+    tracks:
+      - { title: "unwritten", id: 2672119086, length: "3:20" }
+
+  - title: "all too well"
+    slug: all-too-well
+    date: 2025-02-18
+    album_id: 263105892
+    cover: all-too-well.jpg
+    tracks:
+      - { title: "Gate, covered with flowers", id: 2676164673, length: "1:13" }
+      - { title: "it doesn't matter!", id: 2677568099, length: "4:26" }
+      - { title: "露の世は", id: 2705348578, length: "2:48" }
+      - { title: "层霭", id: 3315394720, length: "3:19" }
+
+  - title: "浅滩"
+    slug: qiantan
+    date: 2025-04-22
+    album_id: 269696108
+    cover: qiantan.jpg
+    tracks:
+      - { title: "浅滩", id: 2697415139, length: "3:26" }
+
+  - title: "unwritten (Remix)"
+    slug: unwritten-remix
+    date: 2025-11-15
+    album_id: 349462756
+    cover: shafa-5.jpg
+    compilation: "沙发红了5"
+    tracks:
+      - { title: "unwritten (Remix)", id: 3317611270, length: "3:20" }
+
+  - title: "晴、雨"
+    slug: qing-yu
+    date: 2026-04-30
+    album_id: 373444373
+    cover: hertz-vol7.jpg
+    compilation: "HertzRecords Vol.7 失別星格 Pt.2"
+    tracks:
+      - { title: "晴、雨", id: 3375817412, length: "4:15" }

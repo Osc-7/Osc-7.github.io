@@ -9,6 +9,9 @@ main:
   - title: "Experience"
     url: /#experience
 
+  - title: "Music"
+    url: /music/
+
   - title: "CV"
     url: /files/CV_Yuxuan_Liu.pdf
     external: true
