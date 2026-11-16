@@ -2,8 +2,7 @@
 title: "macchiatoBot"
 excerpt: "A daemon-first LLM assistant with OS kernel-like scheduling, tool execution, and multi-channel frontends (CLI, Feishu, MCP)."
 collection: portfolio
-github_url: "https://github.com/Osc-7/macchiatoBot"
-link: https://github.com/Osc-7/macchiatoBot
+github: https://github.com/Osc-7/macchiatoBot
 date: 2026-03-01
 ---
 

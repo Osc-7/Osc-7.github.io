@@ -43,6 +43,8 @@
     <h2 class="archive__item-title" itemprop="headline">
       {% if post.collection == 'publications' %}
         <a href="{% if post.link %}{{ post.link }}{% else %}{{ base_path }}{{ post.url }}{% endif %}">{{ title }}</a>
+      {% elsif post.collection == 'portfolio' %}
+        {{ title }}
       {% elsif post.link %}
         <a href="{{ post.link }}">{{ title }}</a>
       {% else %}
@@ -87,10 +89,8 @@
     {% endif %}
 
     {% if post.collection == 'portfolio' %}
-      {% if post.github or post.huggingface or post.arxiv %}
+      {% if post.link or post.github or post.huggingface or post.arxiv %}
         {% include publication-actions.html item=post %}
-      {% elsif post.link %}
-        <p class="site-card__actions"><a href="{{ post.link }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> View on GitHub</a></p>
       {% endif %}
     {% endif %}
     </div>

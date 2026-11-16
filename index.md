@@ -7,7 +7,7 @@ author_profile: false
   <img class="hero__avatar" src="{{ '/images/avatar.png' | relative_url }}" alt="{{ site.author.name }}" width="112" height="112" />
   <div class="hero__body">
     <h1 class="hero__name">Yuxuan Liu<span class="hero__name-cn">刘宇轩</span></h1>
-    <p class="hero__tagline">Hi, I'm Yuxuan Liu, an undergraduate in the John Hopcroft Class at SJTU. I'm currently an undergraduate researcher at <a href="https://sjtu-deng-lab.github.io/">DENG Lab</a>, working with <a href="https://thudzj.github.io/">Prof. Zhijie Deng</a> on efficient generative AI and ML systems.</p>
+    <p class="hero__tagline">Hi, I'm Yuxuan Liu, an undergraduate in the John Hopcroft Honors Class at SJTU. I'm currently an undergraduate researcher at <a href="https://sjtu-deng-lab.github.io/">DENG Lab</a>, working with <a href="https://thudzj.github.io/">Prof. Zhijie Deng</a> on efficient generative AI and ML systems.</p>
     <p class="hero__focus">Currently focusing on autoregressive diffusion models and video world models.</p>
     <p class="hero__bio">I also make music — check out <a href="{{ '/music/' | relative_url }}">Osc7's music</a>.</p>
     <nav class="hero__actions" aria-label="Quick links">
@@ -37,6 +37,6 @@ author_profile: false
 <section class="content-section" id="experience">
   <h2 class="content-section__title">Experience</h2>
   <ul class="experience-list">
-    <li class="experience-line"><span class="experience-line__when">2024 – Present</span><span>Undergraduate, John Hopcroft Class, Zhiyuan College, Shanghai Jiao Tong University</span></li>
+    <li class="experience-line"><span class="experience-line__when">2024 – Present</span><span>Undergraduate, John Hopcroft Honors Class, Zhiyuan College, Shanghai Jiao Tong University</span></li>
   </ul>
 </section>
