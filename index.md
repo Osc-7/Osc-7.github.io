@@ -13,7 +13,7 @@ author_profile: false
     <nav class="hero__actions" aria-label="Quick links">
       <a href="{{ '/files/CV_Yuxuan_Liu.pdf' | relative_url }}">CV</a>
       <a href="https://github.com/osc-7">GitHub</a>
-      <a href="mailto:liuyx2005@sjtu.edu.com">Email</a>
+      <a href="mailto:liuyx2005@sjtu.edu.cn">Email</a>
       <a href="https://scholar.google.com/citations?user=jb3aUrMAAAAJ">Scholar</a>
       <a href="{{ '/music/' | relative_url }}">Music</a>
     </nav>

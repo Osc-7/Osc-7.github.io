@@ -15,7 +15,7 @@ name: Yuxuan Liu
 locale: en-US
 title_separator: " | "
 # 你的联系邮箱
-email: "liuyx2005@sjtu.edu.com"
+email: "liuyx2005@sjtu.edu.cn"
 # 网站的一句话描述，会用于搜索引擎优化
 description: Personal website of Yuxuan Liu, undergraduate student at Shanghai Jiao Tong University.
 # 错误修正 1: 下面这行多余的模板注释已被删除。
@@ -42,7 +42,7 @@ author:
   bio: "Undergraduate researcher at DENG Lab, SJTU. Working on efficient generative AI and ML systems."
   location: "Shanghai, China"
   employer: "Shanghai Jiao Tong University"
-  email: "liuyx2005@sjtu.edu.com"
+  email: "liuyx2005@sjtu.edu.cn"
   github: "osc-7"
   googlescholar: "https://scholar.google.com/citations?user=jb3aUrMAAAAJ"
 

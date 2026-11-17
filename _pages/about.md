@@ -23,7 +23,7 @@ redirect_from:
   <div class="about-block">
     <h2>Contact</h2>
     <ul>
-      <li>Email: <a href="mailto:liuyx2005@sjtu.edu.com">liuyx2005@sjtu.edu.com</a></li>
+      <li>Email: <a href="mailto:liuyx2005@sjtu.edu.cn">liuyx2005@sjtu.edu.cn</a></li>
       <li>GitHub: <a href="https://github.com/osc-7">osc-7</a></li>
     </ul>
   </div>
